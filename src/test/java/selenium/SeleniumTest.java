@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.Assert.assertEquals;
+
 public class SeleniumTest {
 	
 	
@@ -20,6 +22,7 @@ public void smartTest() throws InterruptedException {
 	WebDriver driver = new ChromeDriver();
 	driver.get("https:/www.wikipedia.com/");
 		Thread.sleep(3000);
+	assertEquals("Wikipedia", driver.getTitle());
 	driver.quit();
 
 
